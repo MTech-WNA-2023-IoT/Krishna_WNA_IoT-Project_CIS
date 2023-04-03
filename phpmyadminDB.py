@@ -3,11 +3,11 @@
 #Import pymysql module library
 import pymysql
 #Create a connection to MySQL Database 
-conn =pymysql.connect(database="databasename",user="user",password="password",host="localhost")
+conn =pymysql.connect(database="IoTDataBase",user="krishna",password="KRISHNA",host="localhost")
 #Create a MySQL Cursor to that executes the SQLs
 cur=conn.cursor()
 #Create a dictonary containing the fields, name, age and place
-data={'name':'hello','age':10,'place':'kollam'}
+data={'ID':22006,'topic':10,'data':45}
 #Execute the SQL to write data to the database
 cur.execute("INSERT INTO <tablename>(name, age, place)VALUES(%(name)s,%(age)s,%(place)s);",data)
 #Close the cursor
