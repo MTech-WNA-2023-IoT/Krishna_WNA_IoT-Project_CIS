@@ -7,7 +7,7 @@ conn =pymysql.connect(database="IoTDataBase",user="krishna",password="KRISHNA",h
 #Create a MySQL Cursor to that executes the SQLs
 cur=conn.cursor()
 #Create a dictonary containing the fields, name, age and place
-data={'topic':100,'data':007}
+data={'topic':100,'data':7}
 #Execute the SQL to write data to the database
 cur.execute("INSERT INTO mqttdata(topic, data)VALUES(%(topic)s,%(data)s);",data)
 #Close the cursor
