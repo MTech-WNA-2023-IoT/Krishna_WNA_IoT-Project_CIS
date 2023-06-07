@@ -15,8 +15,8 @@ json_api = json.loads(api)
 # Connect to MySQL database
 db = mysql.connector.connect(
     host='0.0.0.0',
-    user='sraddha',
-    password='Sraddha@99',
+    user='krishna',
+    password='KRISHNA',
     database='WeatherAPI'
 )
 # Execute the create table query
