@@ -1,16 +1,3 @@
-import mysql.connector
-
-# Connect to MySQL database
-db = mysql.connector.connect(
-    host='0.0.0.0',
-    user='krishna',
-    password='KRISHNA',
-    database='WeatherAPI'
-)
-
-# Execute the create table query
-db_cursor = db.cursor()
-create_table_query = """
 CREATE TABLE weather_data (
     id INT AUTO_INCREMENT PRIMARY KEY,
     location_name VARCHAR(255),
@@ -20,7 +7,7 @@ CREATE TABLE weather_data (
     longitude FLOAT,
     timezone_id VARCHAR(255),
     localtime_epoch BIGINT,
-    localtime DATETIME,
+    local_time DATETIME,
     last_updated_epoch BIGINT,
     last_updated DATETIME,
     temp_c FLOAT,
@@ -47,10 +34,3 @@ CREATE TABLE weather_data (
     gust_mph FLOAT,
     gust_kph FLOAT
 );
-"""
-db_cursor.execute(create_table_query)
-
-# Close the connection
-db.close()
-
-print("Table created successfully!")
