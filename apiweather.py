@@ -18,8 +18,8 @@ app=Flask(__name__)
 mysql=MySQL()
 
 #Configure MySQL
-app.config['MYSQL_DATABASE_USER'] = 'sraddha'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'sraddha@99'
+app.config['MYSQL_DATABASE_USER'] = 'krishna'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'KRISHNA'
 app.config['MYSQL_DATABASE_DB'] = 'WeatherAPI'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 
