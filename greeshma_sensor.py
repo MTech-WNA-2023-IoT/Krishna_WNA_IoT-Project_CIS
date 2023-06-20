@@ -49,7 +49,14 @@ print(P1, P2, P3, P4)
 
  
 
+import paho.mqtt.client as mqtt
 
+payload=sw4
+topic="t"
+client = mqtt.Client()
+client.connect('0.0.0.0',1883,60)
+(rc,mid)=client.publish(topic,payload);
+client.disconnect();
 
 
 
